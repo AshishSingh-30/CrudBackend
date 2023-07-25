@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-  .connect("mongodb+srv://crud:crud@cluster0.eyruw3u.mongodb.net/Tasks?retryWrites=true&w=majority")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected."))
   .catch((err) => console.log(err));
 
