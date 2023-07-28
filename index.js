@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors({
-  origin: ["https://crud-frontend-tawny.vercel.app/"],
+  origin: ["https://crud-frontend-tawny.vercel.app"],
   credentials: true
 }));
 
