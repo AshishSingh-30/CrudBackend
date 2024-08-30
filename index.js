@@ -1,11 +1,11 @@
 // const express = require("express");
 // const mongoose = require("mongoose");
 // require("dotenv").config();
-import express from "express"
-import mongoose from "mongoose"
+import express from "express";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
-import cors from "cors"
-import routes from "./routes/TaskRoute.js"
+import cors from "cors";
+import routes from "./routes/TaskRoute.js";
 
 // const routes = require("./routes/TaskRoute");
 // const cors = require("cors");
@@ -22,7 +22,6 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected."))
   .catch((err) => console.log(err));
-
 
 app.use("/api", routes);
 
